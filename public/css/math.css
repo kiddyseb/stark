@@ -38,6 +38,13 @@
   background-repeat: no-repeat;
 }
 
+.homeBck {
+  background-image: url(/images/gg4me_home.jpg); 
+  width:1920px; 
+  height:1080px;
+  background-repeat: no-repeat;
+}
+
 .progress00 {
   background-image: url(/images/ProgressBar00.png); 
   width:448px; 
