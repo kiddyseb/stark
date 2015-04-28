@@ -17,6 +17,12 @@
           a(href='/api') API Examples
         li(class=title=='Contact'?'active':undefined)
           a(href='/contact') Contact
+        if user
+          li(class=title=='Math Chrono'?'active':undefined)
+            a(href='/games/math') Math Chrono
+        if user
+          li(class=title=='Math Chrono 2'?'active':undefined)
+            a(href='/games/math2') Math Chrono
       ul.nav.navbar-nav.navbar-right
         if !user
           li(class=title=='Login'?'active':undefined)

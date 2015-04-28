@@ -30,6 +30,12 @@ var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
 
 /**
+ * Test Math seb
+ */
+ var mathController = require('./controllers/games/math/math');
+ var mathController2 = require('./controllers/games/math/math2');
+
+/**
  * API keys and Passport configuration.
  */
 var secrets = require('./config/secrets');
@@ -109,6 +115,12 @@ app.post('/account/profile', passportConf.isAuthenticated, userController.postUp
 app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);
+
+/**
+ * Seb MAth routes.
+ */
+app.get('/games/math', mathController.getMathChrono);
+app.get('/games/math2', mathController2.getMathChrono2);
 
 /**
  * API examples routes.

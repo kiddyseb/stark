@@ -1,0 +1,95 @@
+.mainGame {
+  position: relative;
+  float: left;
+  margin: 5px;
+  height: 800px;
+  width: 1280px;
+  border-radius: 6px;
+  border:1px red solid;
+  background-image: url(/images/Poster.png); 
+  background-repeat: no-repeat;
+  background-size:contain;  
+}
+
+.btn-key {
+  background-image: url(/images/KeyboardRock01.png); 
+  zoom:125%;
+  background-repeat: no-repeat;
+  background-size:contain;
+  border:0px red solid;
+  width:50px; 
+  height:50px;
+  font-size: 24px;
+  font-weight: bold;
+  top:22px;
+  text-align:center;
+  display: inline-block;
+  padding: 10px;
+}
+
+.keyboard {
+  padding-top: 30px;
+}
+
+.mainImg {
+  background-image: url(/images/pirate.png); 
+  width:304px; 
+  height:320px;
+  background-repeat: no-repeat;
+}
+
+.progress00 {
+  background-image: url(/images/ProgressBar00.png); 
+  width:448px; 
+  height:142px;
+  background-repeat: no-repeat;
+}
+
+.progress01 {
+  background-image: url(/images/ProgressBar01.png); 
+  width:448px; 
+  height:142px;
+  background-repeat: no-repeat;
+}
+
+.progress02 {
+  background-image: url(/images/ProgressBar02.png); 
+  width:448px; 
+  height:142px;
+  background-repeat: no-repeat;
+}
+
+.progress03 {
+  background-image: url(/images/ProgressBar03.png); 
+  width:448px; 
+  height:142px;
+  background-repeat: no-repeat;
+}
+
+.progress04 {
+  background-image: url(/images/ProgressBar04.png); 
+  width:448px; 
+  height:142px;
+  background-repeat: no-repeat;
+}
+
+.progress05 {
+  background-image: url(/images/ProgressBar05.png); 
+  width:448px; 
+  height:142px;
+  background-repeat: no-repeat;
+}
+
+.progress06 {
+  background-image: url(/images/ProgressBar06.png); 
+  width:448px; 
+  height:142px;
+  background-repeat: no-repeat;
+}
+
+.progress07 {
+  background-image: url(/images/ProgressBar07.png); 
+  width:448px; 
+  height:142px;
+  background-repeat: no-repeat;
+}

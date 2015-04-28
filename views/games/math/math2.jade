@@ -1,0 +1,67 @@
+extends ../../layout
+
+mixin numberList
+  - var i = 1
+  select#jeuduSel
+    while i <= 20 
+      option(value='#{i}') #{i}
+      - i++
+
+block content  
+  //
+    hr
+    .row
+      .col-sm-6
+        h1 Math Chrono
+        p.lead Bonne Chance.
+      .col-sm-6
+        p 
+          img(
+            src="http://www.tvqc.com/wp-content/uploads/2013/12/Photo-Monster-High.jpg"
+            width="250px"
+            height="150px"
+            )
+  hr
+  .row
+    .col-sm-6
+      h2 Choix du jeu
+      p Veuillez choisir un nombre et une opération
+      p
+        +numberList
+        |                     
+        select#operandSel
+          option(value='+') +
+          |                       
+          option(value='-') -      
+      p
+        a.btn.btn-default(role='button' onclick='start()') Commencer »
+    .col-sm-6      
+    
+  hr
+  h2 Operations
+  #gameArea.mainGame
+    .row
+      .col-sm-4
+        #progressImg.progress00
+      .col-sm-4
+        h2#progressTxt
+      .col-sm-4
+        h2#resultat
+    .row
+      .col-sm-2
+      .col-sm-4
+        #mainImg.mainImg                
+      .col-sm-6 
+        #questionArea
+          p#questions
+    .row
+      .col-sm-2
+      .col-sm-4        
+      .col-sm-6
+        #keyboard.keyboard
+    .row
+      p.your-clock
+  p 
+           
+    
+    
