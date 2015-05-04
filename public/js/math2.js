@@ -8,7 +8,7 @@ $(document).ready(function()
     var nbGood = 0;
     var acceptInput = true;
 
-	initClock = function()
+	function initClock()
 	{
 		clock = new FlipClock($('.your-clock'), {
 			clockFace :'MinuteCounter'
@@ -16,7 +16,7 @@ $(document).ready(function()
 		clock.stop(function() {});
 	}
 
-	createOperationView = function(i)
+	function createOperationView(i)
     {
     	var allOperations = "";
         $("#questions").removeAttr("style");           
@@ -36,7 +36,7 @@ $(document).ready(function()
         $("#progressTxt").text(currentOperationIdx + "/" + nbOperations);
     }
 
-    createAnswersButtons = function(i)
+    function createAnswersButtons(i)
     {
     	var allAnswers = "";                   
         var answer = operations[i].result;
@@ -84,12 +84,12 @@ $(document).ready(function()
         acceptInput = true;
     }
 
-    createAnswersButton = function(i, answer)
+    function createAnswersButton(i, answer)
     {
     	return "<div id=\"answer"+answer+"\" class=\"btn-key\" value="+answer+ " onclick=\'onInput(" + i + "," + answer + ")\'>"+answer+"</div>";
     }
 
-	onInput = function(i, answer)
+	function onInput(i, answer)
 	{
 		if (acceptInput == true)
 		{
@@ -118,7 +118,7 @@ $(document).ready(function()
 		}
 	}
 
-	setProgress = function()
+	function setProgress()
 	{
 		$("#progressTxt").text(currentOperationIdx + "/" + nbOperations);
 
@@ -161,7 +161,7 @@ $(document).ready(function()
 		}
 	}
 	
-	validate = function(i, answer) 
+	function validate(i, answer) 
 	{
         var response = answer;
         $("#operation"+i).html($("#operation"+i).html()+ " " + response);
@@ -176,7 +176,7 @@ $(document).ready(function()
         }
 	}
 
-	start = function() 
+	function start() 
 	{
 		clock = new FlipClock($('.your-clock'), {
 				clockFace :'MinuteCounter'
@@ -192,7 +192,7 @@ $(document).ready(function()
         $("#resultat").text("");
 	}
 
-	initOperations = function()
+	function initOperations()
 	{
 		var useMaxNum = false;
 		for (var i = 0;i < nbOperations;i++)
