@@ -89,7 +89,7 @@ $(document).ready(function()
     	return "<div id=\"answer"+answer+"\" class=\"btn-key\" value="+answer+ " onclick=\'onInput(" + i + "," + answer + ")\'>"+answer+"</div>";
     }
 
-	function onInput(i, answer)
+	onInput = function (i, answer)
 	{
 		if (acceptInput == true)
 		{
@@ -176,7 +176,7 @@ $(document).ready(function()
         }
 	}
 
-	function start() 
+	start = function() 
 	{
 		clock = new FlipClock($('.your-clock'), {
 				clockFace :'MinuteCounter'
@@ -197,7 +197,7 @@ $(document).ready(function()
 		var useMaxNum = false;
 		for (var i = 0;i < nbOperations;i++)
         {
-            if (i % 2 == 0)
+            if (i % 3 == 0)
             {
             	useMaxNum = true;
             }
@@ -262,7 +262,7 @@ $(document).ready(function()
 		    	this.result = Number(this.firstNum) + Number(this.secondNum);
 		    }
 	    }
-	    else
+	    else if (operand == '-')
 	    {
 	        if (useMaxNum)
 		    {
@@ -276,6 +276,19 @@ $(document).ready(function()
 	    	this.secondNum = Math.floor((Math.random() * this.firstNum) + 1);
         	this.result = Number(this.firstNum) - Number(this.secondNum);		    
 	    }
+		else if (operand == 'x')
+	    {
+			if (useMaxNum)
+		    {
+				this.firstNum = jeu;
+		    }
+		    else
+		    {
+		    	this.firstNum = Math.floor((Math.random() * jeu) + 1);
+		    }
+			this.secondNum = Math.floor((Math.random() * this.firstNum) + 1);
+        	this.result = Number(this.firstNum) * Number(this.secondNum);	
+		}
 	};	
 
 	initClock();
