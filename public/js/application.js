@@ -19,3 +19,4 @@
 //= require main
 //= require math
 //= require math2
+//= require wordGuess

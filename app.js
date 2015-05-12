@@ -34,6 +34,8 @@ var contactController = require('./controllers/contact');
  */
  var mathController = require('./controllers/games/math/math');
  var mathController2 = require('./controllers/games/math/math2');
+ 
+  var wordGuessController = require('./controllers/games/wordGuess/wordGuess');
 
 /**
  * API keys and Passport configuration.
@@ -121,6 +123,8 @@ app.get('/account/unlink/:provider', passportConf.isAuthenticated, userControlle
  */
 app.get('/games/math', mathController.getMathChrono);
 app.get('/games/math2', mathController2.getMathChrono2);
+
+app.get('/games/wordGuess', wordGuessController.getWordGuess);
 
 /**
  * API examples routes.
